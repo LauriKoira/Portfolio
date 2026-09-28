@@ -1,0 +1,183 @@
+/* Värit yhdessä paikassa, niin niitä on helppo muuttaa */
+:root {
+    --tausta: #f3f6f8;
+    --pinta: #ffffff;
+    --teksti: #1d2a33;      /* tumma teksti vaalealla taustalla = hyvä kontrasti */
+    --heikko: #4a5a66;
+    --korostus: #1f5f7a;    /* järvensininen */
+    --reuna: #d5dee4;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--teksti);
+    background: var(--tausta);
+  }
+  
+  /* Yläosa: kuva ja nimi vierekkäin */
+  .yla {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+  }
+  
+  .profiilikuva {
+    border-radius: 50%;
+    border: 4px solid var(--korostus);
+    flex-shrink: 0;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .ingressi {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    color: var(--heikko);
+  }
+  
+  #ika {
+    font-weight: bold;
+    color: var(--korostus);
+  }
+  
+  /* Navigaatio */
+  nav {
+    background: var(--korostus);
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    list-style: none;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    text-decoration: underline;
+  }
+  
+  /* Pääsisältö */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 2rem;
+  }
+  
+  section {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--reuna);
+  }
+  
+  section:last-child {
+    border-bottom: none;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+    margin: 0 0 0.8rem;
+    color: var(--korostus);
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    margin: 1.2rem 0 0.4rem;
+  }
+  
+  /* Tekniikat "nappeina" */
+  .taidot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .taidot li {
+    background: var(--pinta);
+    border: 1px solid var(--reuna);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+  }
+  
+  /* Harrastukset kolmena sarakkeena */
+  .kortit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .kortit article {
+    background: var(--pinta);
+    border-left: 4px solid var(--korostus);
+    padding: 0.5rem 1rem 1rem;
+  }
+  
+  .kortit h3 {
+    margin-top: 0.5rem;
+  }
+  
+  .kortit p {
+    margin: 0;
+  }
+  
+  /* Alatunniste */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--heikko);
+    font-size: 0.95rem;
+  }
+  
+  footer a {
+    color: var(--korostus);
+  }
+  
+  /* Näppäimistökäyttäjille näkyvä fokus (saavutettavuus) */
+  a:focus-visible {
+    outline: 3px solid #f2b705;
+    outline-offset: 2px;
+  }
+  
+  /* RESPONSIIVISUUS: kapeilla näytöillä (esim. puhelin) */
+  @media (max-width: 700px) {
+    .yla {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 2rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    nav ul {
+      justify-content: center;
+    }
+  
+    .kortit {
+      grid-template-columns: 1fr; /* kortit allekkain */
+    }
+  }

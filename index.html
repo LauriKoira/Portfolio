@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aino Virtanen – Portfolio</title>
+  <meta name="description" content="Aino Virtanen on ohjelmistokehityksen opiskelija Helsingistä. Portfoliossa esittely, osaaminen ja harrastukset.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="yla">
+    <img src="profiilikuva.svg" alt="Piirretty profiilikuva: hymyilevä nainen, jolla on ruskeat olkapäille ulottuvat hiukset" class="profiilikuva" width="160" height="160">
+    <div>
+      <h1>Aino Virtanen</h1>
+      <p class="ingressi">Olen <span id="ika">?</span>-vuotias ohjelmistokehityksen opiskelija Helsingistä.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Sivun osiot">
+    <ul>
+      <li><a href="#esittely">Esittely</a></li>
+      <li><a href="#osaaminen">Osaaminen</a></li>
+      <li><a href="#harrastukset">Harrastukset</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="esittely">
+      <h2>Esittely</h2>
+      <p>
+        Opiskelen ensimmäistä vuotta ohjelmistokehittäjäksi. Innostuin koodaamisesta,
+        kun tein lukiossa pienen verkkosivun kotikylän urheiluseuralle. Nyt haluan oppia
+        tekemään sivuja, jotka ovat selkeitä ja helppokäyttöisiä kaikille.
+      </p>
+    </section>
+
+    <section id="osaaminen">
+      <h2>Osaaminen</h2>
+
+      <h3>Tekniikat</h3>
+      <ul class="taidot">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript (perusteet)</li>
+        <li>Git ja GitHub</li>
+      </ul>
+
+      <h3>Muut taidot</h3>
+      <ul>
+        <li>Ryhmätyöskentely ja projektien aikataulutus</li>
+        <li>Asiakaspalvelu (kesätyö kahvilassa)</li>
+        <li>Suomi äidinkielenä, englanti sujuvasti, ruotsi perusteet</li>
+      </ul>
+    </section>
+
+    <section id="harrastukset">
+      <h2>Harrastukset</h2>
+      <div class="kortit">
+        <article>
+          <h3>Suunnistus</h3>
+          <p>Käyn kilpailuissa kesäisin ja talvella hiihtosuunnistamassa.</p>
+        </article>
+        <article>
+          <h3>Leivonta</h3>
+          <p>Viikonloppuisin leivon korvapuusteja ja kokeilen uusia reseptejä.</p>
+        </article>
+        <article>
+          <h3>Pelit</h3>
+          <p>Lautapelit kavereiden kanssa ja välillä pienten pelien koodaaminen.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="vuosi"></span> Aino Virtanen · <a href="mailto:aino.virtanen@example.com">aino.virtanen@example.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
